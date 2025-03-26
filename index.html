@@ -16,6 +16,19 @@
     <title>Title page</title>
 
     <link href="./main.d8e0d294.css" rel="stylesheet">
+    <style>
+        .typing-container {
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            border-right: 2px solid black;
+
+        }
+
+        /* @keyframes blink {
+        50% { border-color: transparent; }
+    } */
+    </style>
+
 </head>
 
 <body class="">
@@ -29,7 +42,7 @@
                     style="font-family:Comic Sans MS , cursive, sans-serif; font-size: 50px; color: #fff6f6; font-weight: 999; text-decoration: none; font-style: normal; font-variant: normal; text-transform: capitalize; ">
                     I am Rohit Gupta</h1>
                 <p>
-                <h4 style="color:rgb(28, 241, 28);font-weight: bold;font-family: cursive;">Software Developer
+                <h4 style="color:rgb(28, 241, 28);font-weight: bold;font-family: cursive;">Senior Software Engineer
                 </h4>
                 </p>
                 <p>
@@ -37,8 +50,8 @@
                         target="https://facebook.com/ROHITGUPTA8 ">
                         <i class="fa fa-facebook "></i>
                     </a>
-                    <a class="fa-icon fa-icon-2x " href="https://www.instagram.com/rohhitguptaa " title="Instagram "
-                        Target="https://www.instagram.com/rohhitguptaa ">
+                    <a class="fa-icon fa-icon-2x " href="https://www.instagram.com/rohitgupta.54" title="Instagram "
+                        Target="https://www.instagram.com/rohitgupta.54">
                         <i class="fa fa-instagram "></i>
                     </a>
                     <a class="fa-icon fa-icon-2x " href="https://github.com/RohitGupta8 " title="GitHub "
@@ -51,7 +64,7 @@
                     </a>
 
                 </p>
-                
+
             </div>
 
         </header>
@@ -66,49 +79,127 @@
 
                     <div class="card ">
                         <div class="card-block ">
-                            <h2 style="color:green;font-weight: bold;font-family: cursive;">About me</h2>
+                            <h2 style="color:green;font-weight: bold;font-family: cursive;">Summary</h2>
                             <div class="row ">
-                                <div class="col-md-4 ">
-                                    <marquee behavior="scroll " direction="left " scrollamount= "3">
-                                        <img src="./assets/images/02.jpg "  alt=" ">
-                                        <img src="./assets/images/rg1.jpg " alt=" ">
-                                        <img src="./assets/images/rg345.jpg " alt=" ">
-                                    </marquee>
+                                <div class="col-md-5 ">
+                                    <img src="./assets/images/rg.jpg" alt=" ">
+                                  
                                 </div>
-                                <div class="col-md-8 ">
-                                    <p>
-                                        <marquee behavior="slide" direction="up" scrollamount="4">
-                                            <ul>
+                                <div>
+                                    <div class="col-md-7">
+                                        <p><span class="typing-container" id="typing-text"></span></p>
+                                    </div>
 
-                                                <li>I'm liberal Libra⚖️, Attractive🧲 ,Cool🆒😎, Foodie🍕🍌🍩,
-                                                    Dancer🕺⚡, Cook👨‍🍳🍽️</li>
-                                                <li>I am always energetic and eager to learn new skills.</li>
-                                                <li>I am honest and trustworthy when I am counting money after our
-                                                    church bake-sales.</li>
-                                                <li>I am always on time for organised events, work-related or otherwise.
-                                                </li>
-                                                <li>I understand the importance of being interactive and enjoy
-                                                    communicating with others for the benefit of the company.</li>
-                                                <li>I used the advice passed on by my supervisors to mentor struggling
-                                                    individuals.</li>
-                                            </ul>
-                                        </marquee>
+                                    <script>
+                                        document.addEventListener("DOMContentLoaded", function () {
+                                            const text = "Currently working as a Senior Software Engineer in Naviga Technology Solutions Private Limited since March 2022 .I have 3+ years of experience in building web applications. Skilled in React.js, Node.js, JavaScript, TypeScript, and MongoDB. Worked on publishing and media projects, improving performance and user experience. Helped convert old projects into modern React.js applications. Integrated .NET APIs with the frontend for smooth functionality.";
 
-                                    </p>
+                                            let i = 0;
+                                            const element = document.getElementById("typing-text");
+
+                                            function type() {
+                                                if (i < text.length) {
+                                                    element.innerHTML += text.charAt(i);
+                                                    i++;
+                                                    setTimeout(type, 50);
+                                                } else {
+                                                    // Remove cursor after typing completes
+                                                    element.style.borderRight = "none";
+                                                }
+                                            }
+
+                                            type();
+                                        });
+                                    </script>
 
                                 </div>
                             </div>
                         </div>
                     </div>
 
+
+
+                    <div class="card ">
+                        <div class="card-block ">
+                            <h2 style="color:green;font-weight: bold;font-family: cursive; ">Skills</h2>
+
+
+                            <marquee behavior="scroll " direction="left ">
+                                <img src="./assets/images/rea.png " alt=" ">
+                                <img src="./assets/images/js.png " alt=" ">
+                                <img src="./assets/images/ts.png " alt=" ">
+                                <img src="./assets/images/njs.png " alt=" ">
+                                <img src="./assets/images/html.png " alt=" ">
+                                <img src="./assets/images/css3.png " alt=" ">
+                                <img src="./assets/images/git.png " alt=" ">
+                            </marquee>
+
+                        </div>
+                    </div>
+
+                    <div class="card ">
+                        <div class="card-block ">
+                            <section id="projects">
+                                <h2>Projects</h2>
+                                <div class="project">
+                                    <h3>Matrix (Subscription and Circulation Management System)</h3>
+                                    <ul>
+                                        <li>Converted an old project (Open Road) into React.js for better speed and
+                                            maintainability.</li>
+                                        <li>Used Redux Toolkit for efficient state management.</li>
+                                        <li>Integrated .NET APIs with the frontend for smooth performance.</li>
+                                        <li>Enhanced UI/UX by developing modern and responsive components.</li>
+                                    </ul>
+                                </div>
+                                <div class="project">
+                                    <h3>Infomaker (Publishing, Archiving, and Content Distribution)</h3>
+                                    <ul>
+                                        <li>Worked on File Library Plugin, PDF Plugin, and Copy-Paste Functionality.
+                                        </li>
+                                        <li>Improved the Writer-Client module to make it more user-friendly.</li>
+                                    </ul>
+                                </div>
+                                <div class="project">
+                                    <h3>Fundoo Note (Google Keep-like Note App)</h3>
+                                    <ul>
+                                        <li>Created 16+ backend APIs using Node.js, Express.js, and MongoDB.</li>
+                                        <li>Used JWT for secure user authentication.</li>
+                                        <li>Developed the frontend using React.js and SCSS.</li>
+                                    </ul>
+                                </div>
+                                <div class="project">
+                                    <h3>Online Book Store (E-commerce Platform for Books)</h3>
+                                    <ul>
+                                        <li>Built a backend system using Node.js and MongoDB.</li>
+                                        <li>Used Redis and Mongoose to improve performance.</li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
                     <div class="card">
                         <div class="card-block">
                             <h2 style="color:green;font-weight: bold;font-family: cursive;">Certificates</h2>
                             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-
                                 <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox">
+
+                                    <div class="item">
+                                        <img src="./assets/images/javascript.png" class="img-responsive" alt="...">
+                                        <div class="carousel-caption">
+                                            <h3 class="h5">Javascript from Hacker Rank</h3>
+                                            <p>2024</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <img src="./assets/images/react.png" class="img-responsive" alt="...">
+                                        <div class="carousel-caption">
+                                            <h3 class="h5">FrontEnd React Developer</h3>
+                                            <p>2024</p>
+                                        </div>
+                                    </div>
+
                                     <div class="item active">
                                         <img src="./assets/images/03.jpg" class="img-responsive" alt="...">
                                         <div class="carousel-caption">
@@ -116,21 +207,7 @@
                                             <p>2020</p>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <img src="./assets/images/04.jpg" class="img-responsive" alt="...">
-                                        <div class="carousel-caption">
-                                            <h3 class="h5">HTML,CSS,JAVASCRIPT</h3>
-                                            <p>2020</p>
-                                        </div>
-                                    </div>
 
-                                    <div class="item">
-                                        <img src="./assets/images/05.jpg" class="img-responsive" alt="...">
-                                        <div class="carousel-caption">
-                                            <h3 class="h5">Machine Learning</h3>
-                                            <p>2020</p>
-                                        </div>
-                                    </div>
                                     <div class="item">
                                         <img src="./assets/images/06.jpg" class="img-responsive" alt="...">
                                         <div class="carousel-caption">
@@ -154,50 +231,6 @@
 
                     <div class="card ">
                         <div class="card-block ">
-                            <h2 style="color:green;font-weight: bold;font-family: cursive; ">Technologies and Tools</h2>
-
-
-                            <marquee behavior="scroll " direction="left ">
-                                <img src="./assets/images/html.png " alt=" ">
-                                <img src="./assets/images/css3.png " alt=" ">
-                                <img src="./assets/images/js.png " alt=" ">
-                                <img src="./assets/images/j.png " alt=" ">
-                                <img src="./assets/images/njs.png " alt=" ">
-                                <img src="./assets/images/ajs.png " alt=" ">
-                                <img src="./assets/images/mql.png " alt=" ">
-                                <img src="./assets/images/mdb.png " alt=" ">
-                                <img src="./assets/images/ms.png " alt=" ">
-                                <img src="./assets/images/vscode.png " alt=" ">
-                                <img src="./assets/images/ij.png " alt=" ">
-                            </marquee>
-
-                        </div>
-                    </div>
-
-                    <!-- <div class="card ">
-                        <div class="card-block ">
-                            <h2>Work</h2>
-                            <div class="work-experience ">
-                                <small class="date ">2017-2015</small>
-                                <h3 class="h5 date-title ">Web developer - <a href="http://en.orson.io " title="Create professionnal website ">Orson.io</a></h3>
-
-
-                                <p>Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Vitae ultricies leo integer malesuada nunc. Imperdiet proin fermentum leo vel orci porta non pulvinar neque. Fermentum leo vel orci porta non. Posuere
-                                    sollicitudin aliquam ultrices sagittis. Aliquam faucibus purus in massa tempor nec.</p>
-                            </div>
-
-                            <div class="work-experience ">
-                                <small class="date ">2017-2015</small>
-                                <h3 class="h5 date-title ">Web developer - <a href="http://mashup-template.com " title=" ">Mashup Template</a></h3>
-
-                                <p>Fermentum leo vel orci porta non. Posuere sollicitudin aliquam ultrices sagittis. Aliquam faucibus purus in massa tempor nec.</p>
-                            </div>
-                        </div>
-                    </div> -->
-
-
-                    <div class="card ">
-                        <div class="card-block ">
                             <h2 style="color:green;font-weight: bold;font-family: cursive; ">Education</h2>
                             <div class="row ">
                                 <div class="col-md-4 ">
@@ -209,6 +242,19 @@
 
                                 </div>
 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card ">
+                        <div class="card-block ">
+                            <h2 style="color:green;font-weight: bold;font-family: cursive; ">Awards</h2>
+                            <div class="row ">
+                               
+                                <img src="./assets/images/ct.jpg " alt=" ">
+                                <div class="carousel-caption">
+                                    <h3 class="h5">Star of the Month</h3>
+                                    <p>December 2024</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -273,7 +319,7 @@
             <div class="row ">
                 <div class="col-xs-12 ">
 
-                    <p style="color:rgb(238, 223, 22);font-weight: bold;font-family: cursive; ">CopyRights © 2021-2022 .
+                    <p style="color:rgb(238, 223, 22);font-weight: bold;font-family: cursive; ">CopyRights © 2025-2026 .
                         All Rights Reserved and Design by
                         <a href="https://facebook.com/ROHITGUPTA8 ">Rohit Gupta</a>
                     <p>
@@ -281,8 +327,8 @@
                             target="https://facebook.com/ROHITGUPTA8 ">
                             <i class="fa fa-facebook "></i>
                         </a>
-                        <a class="fa-icon fa-icon-2x " href="https://www.instagram.com/rohhitguptaa " title="Instagram "
-                            Target="https://www.instagram.com/rohhitguptaa ">
+                        <a class="fa-icon fa-icon-2x " href="https://www.instagram.com/rohitgupta.54 "
+                            title="Instagram " Target="https://www.instagram.com/rohitgupta.54">
                             <i class="fa fa-instagram "></i>
                         </a>
                         <a class="fa-icon fa-icon-2x " href="https://github.com/RohitGupta8 " title="GitHub "
