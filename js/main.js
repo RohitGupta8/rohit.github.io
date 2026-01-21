@@ -36,11 +36,11 @@
 	// About Me Typing Effect
 	if ($('.about .typed-text-about').length == 1) {
 		var about_strings = `
-     Currently working as a Senior Software Engineer in Naviga Technology Solutions Private Limited since March 2022 .I have 3+ years of experience in building web applications. Skilled in React.js, Node.js, JavaScript, TypeScript, and MongoDB. Worked on publishing and media projects, improving performance and user experience. Helped convert old projects into modern React.js applications. Integrated .NET APIs with the frontend for smooth functionality.
+     Currently working as a Senior Software Engineer in Naviga Technology Solutions Private Limited since March 2022 .I have 4+ years of experience in building web applications. Skilled in React.js, Node.js, JavaScript, TypeScript, and MongoDB. Worked on publishing and media projects, improving performance and user experience. Helped convert old projects into modern React.js applications. Integrated .NET APIs with the frontend for smooth functionality.
     `;
 		var about_typed = new Typed('.about .typed-text-about', {
 			strings: [about_strings.trim()],
-			typeSpeed: 80,
+			typeSpeed: 30,
             loop: true,
 		});
 	}
