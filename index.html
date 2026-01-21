@@ -495,22 +495,32 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form">
-                                <form>
+                                <form id="contact-form" action="https://formsubmit.co/rohitg213@gmail.com" method="POST">
+                                    <!-- Hidden fields for Formsubmit configuration -->
+                                    <input type="hidden" name="_subject" value="New message from Portfolio Website">
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <input type="hidden" name="_template" value="table">
+                                    
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <input type="text" class="form-control" placeholder="Your Name" />
+                                            <input type="text" class="form-control" name="name" placeholder="Your Name" required />
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <input type="email" class="form-control" placeholder="Your Email" />
+                                            <input type="email" class="form-control" name="email" placeholder="Your Email" required />
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject" />
+                                        <input type="text" class="form-control" name="subject" placeholder="Subject" required />
                                     </div>
                                     <div class="form-group">
-                                        <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                                        <textarea class="form-control" rows="5" name="message" placeholder="Message" required></textarea>
                                     </div>
-                                    <div><button class="btn" type="submit">Send Message</button></div>
+                                    <div>
+                                        <button class="btn" type="submit" id="submit-btn">
+                                            <span id="btn-text">Send Message</span>
+                                        </button>
+                                    </div>
+                                    <div id="form-messages" style="margin-top: 15px;"></div>
                                 </form>
                             </div>
                         </div>

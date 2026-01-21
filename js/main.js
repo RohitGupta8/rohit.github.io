@@ -89,4 +89,44 @@
 		$('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
 		return false;
 	});
+
+	// Contact form submission
+	$('#contact-form').on('submit', function(e) {
+		e.preventDefault(); // Stop page redirect
+		
+		const submitBtn = $('#submit-btn');
+		const btnText = $('#btn-text');
+		const formMessages = $('#form-messages');
+		const form = this;
+		
+		// Show sending state
+		btnText.text('Sending...');
+		submitBtn.prop('disabled', true);
+		formMessages.html('<div class="alert alert-info">Sending your message...</div>');
+		
+		// Submit form in hidden iframe to prevent redirect
+		const iframe = $('<iframe>', {
+			name: 'hidden-form',
+			style: 'display: none;'
+		});
+		
+		$('body').append(iframe);
+		$(form).attr('target', 'hidden-form');
+		
+		// Submit the form
+		form.submit();
+		
+		// Show success message after 2 seconds
+		setTimeout(function() {
+			formMessages.html('<div class="alert alert-success"><strong>Thank you!</strong> Your message has been sent successfully to Rohit Gupta. I will get back to you soon! 🎉</div>');
+			btnText.text('Send Message');
+			submitBtn.prop('disabled', false);
+			form.reset(); // Clear the form
+			
+			// Remove iframe after use
+			iframe.remove();
+		}, 2000);
+		
+		return false;
+	});
 })(jQuery);
